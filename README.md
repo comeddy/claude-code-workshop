@@ -1,25 +1,26 @@
 # Claude Code Deep Dive Workshop
 
 [![License: Proprietary](https://img.shields.io/badge/license-Proprietary-blue.svg)](#license)
-[![Build](https://img.shields.io/badge/build-passing-brightgreen.svg)](./)
-[![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](./CHANGELOG.md)
-[![English](https://img.shields.io/badge/lang-English-blue.svg)](#english)
-[![Korean](https://img.shields.io/badge/lang-%ED%95%9C%EA%B5%AD%EC%96%B4-red.svg)](#한국어)
+[![Version](https://img.shields.io/badge/version-1.0.1-green.svg)](./CHANGELOG.md)
+<a href="#english"><img src="https://img.shields.io/badge/lang-English-blue.svg" alt="English"></a>
+<a href="#korean"><img src="https://img.shields.io/badge/lang-한국어-red.svg" alt="Korean"></a>
 
-A 3-day Claude Code curriculum delivered as six rendered PDF chapters and 502 extracted code snippets.
-6개 챕터 PDF와 502개 추출 코드 스니펫으로 제공되는 3일간의 Claude Code 커리큘럼입니다.
+A 3-day Claude Code curriculum delivered as dated PDF chapter editions and 502 extracted code snippets. | 날짜별 챕터 PDF 에디션과 502개 추출 코드 스니펫으로 제공되는 3일간의 Claude Code 커리큘럼입니다.
 
 ---
+
+<a id="english"></a>
 
 # English
 
 ## Overview
 
-Claude Code Deep Dive Workshop is a Korean-language technical curriculum delivered as ready-to-present PDF slide decks and a searchable archive of every code example used in the workshop. The repository contains six chapter PDFs at the project root covering 850 slides in total, paired with 502 markdown files under `Script/workshop-code/` that extract each code-bearing slide into a standalone, grep-friendly snippet with Korean speaker notes. All slide artifacts follow a consistent design system for visual identity.
+Claude Code Deep Dive Workshop is a Korean-language technical curriculum delivered as ready-to-present PDF slide decks and a searchable archive of every code example used in the workshop. Chapter PDFs ship in date-stamped edition directories — `20260525/` for the original edition and `20260703/` for the latest, newly authored against Claude Code 2.1.198 — each containing six chapters, while `tech_doc/` holds supplementary deep-dive documents on Claude Code architecture and cost efficiency. The decks are paired with 502 markdown files under `Script/workshop-code/` that extract each code-bearing slide into a standalone, grep-friendly snippet with Korean speaker notes. All slide artifacts follow a consistent design system for visual identity.
 
 ## Features
 
-- **Six rendered PDF chapters** — 850 slides total covering Overview, Agents & Subagents, Admin Setup, Settings, CLI Reference, and the Agent SDK; all PDFs ship at the project root for direct access.
+- **Six chapter PDFs per edition** — Overview, Agents & Subagents, Admin Setup, Settings, CLI Reference, and the Agent SDK; each curriculum edition ships in a date-stamped directory (`20260525/`, `20260703/`). The latest `20260703/` edition is newly authored against Claude Code 2.1.198.
+- **Supplementary technical documents** — `tech_doc/` carries deep-dive references beyond the curriculum: `ClaudeCode-Architecture.pdf` and `Claude_Cost_Efficiency.pdf`.
 - **502 extracted code snippets** — Each code-bearing slide is exported as a numbered markdown file under `Script/workshop-code/`, organized by chapter and part for fast lookup.
 - **Bilingual coverage in code** — Python and TypeScript samples appear side by side across SDK material, with three authentication paths (Anthropic Direct, Amazon Bedrock, Vertex AI).
 - **Korean speaker notes per snippet** — Every extracted markdown file embeds the original Korean speaker script alongside the code.
@@ -27,7 +28,7 @@ Claude Code Deep Dive Workshop is a Korean-language technical curriculum deliver
 
 ## Prerequisites
 
-- A PDF viewer to read the chapter decks at the project root.
+- A PDF viewer to read the chapter decks under the dated edition directories (`20260525/`, `20260703/`) and `tech_doc/`.
 - A text editor or GitHub viewer to read markdown snippets under `Script/workshop-code/`.
 - `grep` and `find` (or any equivalent search tool) to locate snippets by keyword or file name.
 - `git` to clone the repository.
@@ -39,9 +40,9 @@ Claude Code Deep Dive Workshop is a Korean-language technical curriculum deliver
 git clone https://github.com/whchoi98/claude-code-workshop.git
 cd claude-code-workshop
 
-# 2. Open the PDF for a given chapter (example: Chapter 1)
-xdg-open ClaudeCode_Ch1_20260525.pdf    # Linux
-# open  ClaudeCode_Ch1_20260525.pdf       # macOS
+# 2. Open the PDF for a given chapter from the latest edition (example: Chapter 1)
+xdg-open 20260703/ClaudeCode_Ch1_20260703.pdf    # Linux
+# open  20260703/ClaudeCode_Ch1_20260703.pdf       # macOS
 
 # 3. Browse extracted code snippets
 ls Script/workshop-code/ch6-sdk/part-06-production/
@@ -67,20 +68,23 @@ ls Script/workshop-code/ch6-sdk/part-01-sdk-basics/
 
 # Open a single snippet
 cat Script/workshop-code/ch6-sdk/part-06-production/104-retry-python.md
+
+# Open a supplementary technical document
+xdg-open tech_doc/ClaudeCode-Architecture.pdf    # Linux
 ```
 
 ## Project Structure
 
-```
+```text
 claude-code-workshop/
 ├── README.md                                  # This file
 ├── CHANGELOG.md                               # Per-version change history
-├── ClaudeCode_Ch1_20260525.pdf                # Ch.1 Overview, 200 slides
-├── ClaudeCode_Ch2_20260525.pdf                # Ch.2 Agents & Subagents, 110 slides
-├── ClaudeCode_Ch3_20260525.pdf                # Ch.3 Admin Setup, 120 slides
-├── ClaudeCode_Ch4_20260525.pdf                # Ch.4 Settings, 140 slides
-├── ClaudeCode_Ch5_20260525..pdf               # Ch.5 CLI Reference, 130 slides
-├── ClaudeCode_Ch6_20260525.pdf                # Ch.6 Agent SDK, 150 slides
+├── CLAUDE.md                                  # Claude Code project guidance
+├── 20260525/                                  # 2026-05-25 edition chapter PDFs (Ch1–Ch6)
+├── 20260703/                                  # 2026-07-03 edition (latest, Claude Code 2.1.198 based)
+├── tech_doc/                                  # Supplementary technical documents
+│   ├── ClaudeCode-Architecture.pdf            # Claude Code architecture deep dive
+│   └── Claude_Cost_Efficiency.pdf             # Claude cost efficiency guide
 └── Script/
     ├── workshop-code-README.md                # Top-level guide for the snippet archive
     └── workshop-code/                         # 502 extracted code snippets
@@ -123,15 +127,18 @@ This project is distributed under **Proprietary** terms. Internal use, private d
 
 ---
 
+<a id="korean"></a>
+
 # 한국어
 
 ## 개요
 
-Claude Code Deep Dive Workshop은 발표 가능한 PDF 슬라이드 자료와 워크샵에서 사용된 모든 코드 예제를 검색 가능한 형태로 함께 제공하는 한국어 기술 커리큘럼입니다. 저장소 루트에는 총 850 슬라이드 분량의 6개 챕터 PDF가, `Script/workshop-code/` 아래에는 코드를 포함한 슬라이드를 각각 독립된 마크다운 파일로 추출한 502개의 스니펫이 들어 있습니다. 추출된 각 파일에는 한국어 발표자 노트가 포함되어 있으며, 모든 슬라이드 자료는 일관된 디자인 시스템을 따라 시각 정체성을 유지합니다.
+Claude Code Deep Dive Workshop은 발표 가능한 PDF 슬라이드 자료와 워크샵에서 사용된 모든 코드 예제를 검색 가능한 형태로 함께 제공하는 한국어 기술 커리큘럼입니다. 챕터 PDF는 날짜 기반 에디션 디렉토리로 제공됩니다 — 최초 에디션은 `20260525/`, 최신 에디션은 Claude Code 2.1.198 기준으로 새로 제작한 `20260703/`이며 각 에디션은 6개 챕터로 구성됩니다. `tech_doc/`에는 Claude Code 아키텍처와 비용 효율화를 다루는 보조 심층 문서가 들어 있습니다. 슬라이드 자료와 함께 `Script/workshop-code/` 아래에는 코드를 포함한 슬라이드를 각각 독립된 마크다운 파일로 추출한 502개의 스니펫이 제공되며, 각 파일에는 한국어 발표자 노트가 포함되어 있습니다. 모든 슬라이드 자료는 일관된 디자인 시스템을 따라 시각 정체성을 유지합니다.
 
 ## 주요 기능
 
-- **6개 챕터 PDF 산출물** — Overview, Agents & Subagents, Admin Setup, Settings, CLI Reference, Agent SDK 총 850 슬라이드. 모든 PDF가 저장소 루트에 위치하여 즉시 열람 가능.
+- **에디션별 6개 챕터 PDF** — Overview, Agents & Subagents, Admin Setup, Settings, CLI Reference, Agent SDK. 각 커리큘럼 에디션은 날짜 디렉토리(`20260525/`, `20260703/`)로 제공됩니다. 최신 `20260703/` 에디션은 Claude Code 2.1.198 기준으로 새로 제작되었습니다.
+- **보조 기술 문서** — `tech_doc/`에 커리큘럼 외 심층 참고 자료인 `ClaudeCode-Architecture.pdf`와 `Claude_Cost_Efficiency.pdf`가 포함됩니다.
 - **502개 추출 코드 스니펫** — 코드를 포함하는 모든 슬라이드가 `Script/workshop-code/` 아래에 챕터·파트 단위로 번호가 매겨진 마크다운으로 정리되어 빠른 검색이 가능합니다.
 - **코드 수준의 이중 언어 지원** — SDK 자료 전반에 Python과 TypeScript 예제가 나란히 제공되며, 3가지 인증 경로(Anthropic Direct, Amazon Bedrock, Vertex AI)를 모두 다룹니다.
 - **스니펫별 한국어 발표자 노트** — 추출된 모든 마크다운 파일에 코드와 함께 원본 한국어 발표 스크립트가 포함됩니다.
@@ -139,7 +146,7 @@ Claude Code Deep Dive Workshop은 발표 가능한 PDF 슬라이드 자료와 �
 
 ## 사전 요구 사항
 
-- 저장소 루트의 챕터 PDF를 열어볼 수 있는 PDF 뷰어.
+- 날짜 에디션 디렉토리(`20260525/`, `20260703/`)와 `tech_doc/`의 PDF를 열어볼 수 있는 PDF 뷰어.
 - `Script/workshop-code/` 아래 마크다운을 확인할 수 있는 텍스트 에디터 또는 GitHub 웹 뷰어.
 - 키워드나 파일명으로 스니펫을 찾기 위한 `grep`, `find` (또는 동등한 검색 도구).
 - 저장소 클론에 사용할 `git`.
@@ -151,9 +158,9 @@ Claude Code Deep Dive Workshop은 발표 가능한 PDF 슬라이드 자료와 �
 git clone https://github.com/whchoi98/claude-code-workshop.git
 cd claude-code-workshop
 
-# 2. 원하는 챕터 PDF 열기 (예: Chapter 1)
-xdg-open ClaudeCode_Ch1_20260525.pdf    # Linux
-# open  ClaudeCode_Ch1_20260525.pdf       # macOS
+# 2. 최신 에디션에서 원하는 챕터 PDF 열기 (예: Chapter 1)
+xdg-open 20260703/ClaudeCode_Ch1_20260703.pdf    # Linux
+# open  20260703/ClaudeCode_Ch1_20260703.pdf       # macOS
 
 # 3. 추출된 코드 스니펫 탐색
 ls Script/workshop-code/ch6-sdk/part-06-production/
@@ -179,20 +186,23 @@ ls Script/workshop-code/ch6-sdk/part-01-sdk-basics/
 
 # 단일 스니펫 열기
 cat Script/workshop-code/ch6-sdk/part-06-production/104-retry-python.md
+
+# 보조 기술 문서 열기
+xdg-open tech_doc/ClaudeCode-Architecture.pdf    # Linux
 ```
 
 ## 프로젝트 구조
 
-```
+```text
 claude-code-workshop/
 ├── README.md                                  # 이 파일
 ├── CHANGELOG.md                               # 버전별 변경 사항
-├── ClaudeCode_Ch1_20260525.pdf                # Ch.1 Overview, 200 슬라이드
-├── ClaudeCode_Ch2_20260525.pdf                # Ch.2 Agents & Subagents, 110 슬라이드
-├── ClaudeCode_Ch3_20260525.pdf                # Ch.3 Admin Setup, 120 슬라이드
-├── ClaudeCode_Ch4_20260525.pdf                # Ch.4 Settings, 140 슬라이드
-├── ClaudeCode_Ch5_20260525..pdf               # Ch.5 CLI Reference, 130 슬라이드
-├── ClaudeCode_Ch6_20260525.pdf                # Ch.6 Agent SDK, 150 슬라이드
+├── CLAUDE.md                                  # Claude Code 프로젝트 가이드
+├── 20260525/                                  # 2026-05-25 에디션 챕터 PDF (Ch1–Ch6)
+├── 20260703/                                  # 2026-07-03 에디션 (최신, Claude Code 2.1.198 기준)
+├── tech_doc/                                  # 보조 기술 문서
+│   ├── ClaudeCode-Architecture.pdf            # Claude Code 아키텍처 심층 문서
+│   └── Claude_Cost_Efficiency.pdf             # Claude 비용 효율화 가이드
 └── Script/
     ├── workshop-code-README.md                # 스니펫 아카이브 최상위 가이드
     └── workshop-code/                         # 추출된 502개 코드 스니펫

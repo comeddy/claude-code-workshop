@@ -1,9 +1,11 @@
 # Changelog
 
-[![English](https://img.shields.io/badge/lang-English-blue.svg)](#english)
-[![Korean](https://img.shields.io/badge/lang-%ED%95%9C%EA%B5%AD%EC%96%B4-red.svg)](#한국어)
+<a href="#english"><img src="https://img.shields.io/badge/lang-English-blue.svg" alt="English"></a>
+<a href="#korean"><img src="https://img.shields.io/badge/lang-한국어-red.svg" alt="Korean"></a>
 
 ---
+
+<a id="english"></a>
 
 # English
 
@@ -11,6 +13,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+### Added
+
+- Add the 2026-07-03 edition of all six chapter PDFs under `20260703/`, newly authored against Claude Code 2.1.198.
+- Add `tech_doc/ClaudeCode-Architecture.pdf`, a Claude Code architecture deep-dive document.
+- Add `tech_doc/Claude_Cost_Efficiency.pdf`, a Claude cost efficiency guide.
+- Add a root `CLAUDE.md` documenting repository layout and content conventions for Claude Code.
+
+### Changed
+
+- Move the 2026-05-25 chapter PDFs from the project root into `20260525/` so each curriculum edition lives in its own date-stamped directory.
+- Group supplementary technical documents under `tech_doc/`, separate from the chapter curriculum.
+- Update `README.md` paths, project structure tree, and usage examples to reflect the edition directories and `tech_doc/`.
 
 ## [1.0.1] - 2026-05-27
 
@@ -53,12 +68,27 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ---
 
+<a id="korean"></a>
+
 # 한국어
 
 이 프로젝트의 모든 주요 변경 사항은 이 파일에 기록됩니다.
 이 문서는 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)를 기반으로 하며, [Semantic Versioning](https://semver.org/spec/v2.0.0.html)을 따릅니다.
 
 ## [Unreleased]
+
+### Added
+
+- Claude Code 2.1.198 기준으로 새로 제작한 2026-07-03 에디션 챕터 PDF 6종을 `20260703/` 아래에 추가.
+- Claude Code 아키텍처 심층 문서 `tech_doc/ClaudeCode-Architecture.pdf` 추가.
+- Claude 비용 효율화 가이드 `tech_doc/Claude_Cost_Efficiency.pdf` 추가.
+- 저장소 구조와 콘텐츠 규약을 기술한 루트 `CLAUDE.md` 추가.
+
+### Changed
+
+- 2026-05-25 챕터 PDF를 저장소 루트에서 `20260525/` 디렉토리로 이동하여 커리큘럼 에디션을 날짜 디렉토리 단위로 관리하도록 변경.
+- 보조 기술 문서를 챕터 커리큘럼과 분리하여 `tech_doc/` 아래로 정리.
+- 에디션 디렉토리와 `tech_doc/` 구조에 맞게 `README.md`의 경로, 프로젝트 구조 트리, 사용 예시 갱신.
 
 ## [1.0.1] - 2026-05-27
 
