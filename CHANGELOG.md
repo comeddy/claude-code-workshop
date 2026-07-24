@@ -20,12 +20,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Add `tech_doc/ClaudeCode-Architecture.pdf`, a Claude Code architecture deep-dive document.
 - Add `tech_doc/Claude_Cost_Efficiency.pdf`, a Claude cost efficiency guide.
 - Add a root `CLAUDE.md` documenting repository layout and content conventions for Claude Code.
+- Add `ccw-hands-on-lab/`, a hands-on lab archive of self-contained HTML guides: six chapter labs (Ch1–Ch6) and four capstone labs (main, B, C, D), entered through an `index.html` portal page.
+- Add three reference pages to the lab archive covering slash commands, plugins, and the Claude Code directory structure.
+- Add GitHub link cards for the 20260703 slide sources and `tech_doc/` to the lab portal page.
+- Publish the hands-on lab guides to GitHub Pages at [whchoi98.github.io/ccw-hands-on-lab](https://whchoi98.github.io/ccw-hands-on-lab/).
 
 ### Changed
 
 - Move the 2026-05-25 chapter PDFs from the project root into `20260525/` so each curriculum edition lives in its own date-stamped directory.
 - Group supplementary technical documents under `tech_doc/`, separate from the chapter curriculum.
 - Update `README.md` paths, project structure tree, and usage examples to reflect the edition directories and `tech_doc/`.
+- Update `README.md` features, prerequisites, and project structure tree to document `ccw-hands-on-lab/` and link the published lab portal.
 
 ## [1.0.1] - 2026-05-27
 
@@ -83,12 +88,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Claude Code 아키텍처 심층 문서 `tech_doc/ClaudeCode-Architecture.pdf` 추가.
 - Claude 비용 효율화 가이드 `tech_doc/Claude_Cost_Efficiency.pdf` 추가.
 - 저장소 구조와 콘텐츠 규약을 기술한 루트 `CLAUDE.md` 추가.
+- 챕터별 랩 6개(Ch1–Ch6)와 캡스톤 랩 4개(main, B, C, D)를 독립 실행형 HTML로 담은 핸즈온랩 아카이브 `ccw-hands-on-lab/`을 `index.html` 포털 페이지와 함께 추가.
+- 슬래시 커맨드, 플러그인, Claude Code 디렉토리 구조를 다루는 참조 문서 3종을 랩 아카이브에 추가.
+- 랩 포털 페이지에 20260703 강의자료와 `tech_doc/`으로 연결되는 GitHub 링크 카드 추가.
+- 핸즈온랩 가이드를 GitHub Pages([whchoi98.github.io/ccw-hands-on-lab](https://whchoi98.github.io/ccw-hands-on-lab/))에 게시.
 
 ### Changed
 
 - 2026-05-25 챕터 PDF를 저장소 루트에서 `20260525/` 디렉토리로 이동하여 커리큘럼 에디션을 날짜 디렉토리 단위로 관리하도록 변경.
 - 보조 기술 문서를 챕터 커리큘럼과 분리하여 `tech_doc/` 아래로 정리.
 - 에디션 디렉토리와 `tech_doc/` 구조에 맞게 `README.md`의 경로, 프로젝트 구조 트리, 사용 예시 갱신.
+- `ccw-hands-on-lab/` 디렉토리와 게시된 랩 포털 링크를 반영하도록 `README.md`의 주요 기능, 사전 요구 사항, 프로젝트 구조 트리 갱신.
 
 ## [1.0.1] - 2026-05-27
 
