@@ -1,7 +1,7 @@
 # Claude Code Deep Dive Workshop
 
 [![License: Proprietary](https://img.shields.io/badge/license-Proprietary-blue.svg)](#license)
-[![Version](https://img.shields.io/badge/version-1.0.1-green.svg)](./CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.1.0-green.svg)](./CHANGELOG.md)
 <a href="#english"><img src="https://img.shields.io/badge/lang-English-blue.svg" alt="English"></a>
 <a href="#korean"><img src="https://img.shields.io/badge/lang-한국어-red.svg" alt="Korean"></a>
 
@@ -21,7 +21,7 @@ Claude Code Deep Dive Workshop is a Korean-language technical curriculum deliver
 
 - **Six chapter PDFs per edition** — Overview, Agents & Subagents, Admin Setup, Settings, CLI Reference, and the Agent SDK; each curriculum edition ships in a date-stamped directory (`20260525/`, `20260703/`). The latest `20260703/` edition is newly authored against Claude Code 2.1.198.
 - **Supplementary technical documents** — `tech_doc/` carries deep-dive references beyond the curriculum: `ClaudeCode-Architecture.pdf` and `Claude_Cost_Efficiency.pdf`.
-- **Hands-on lab guides** — `ccw-hands-on-lab/` provides self-contained HTML lab guides: one per chapter (Ch1–Ch6), four capstone labs (main, B, C, D), and three reference pages (slash commands, plugins, directory structure), with an `index.html` portal page as the entry point. Published at [whchoi98.github.io/ccw-hands-on-lab](https://whchoi98.github.io/ccw-hands-on-lab/).
+- **Hands-on lab guides** — `ccw-hands-on-lab/` provides self-contained HTML lab guides: one per chapter (Ch1–Ch6), four capstone labs (main, B, C, D), and three reference pages (slash commands, plugins, directory structure), with an `index.html` portal page as the entry point. The labs cover both authentication paths: Anthropic subscription/Enterprise or Claude Code on Bedrock. Published at [comeddy.github.io/ccw-hands-on-lab](https://comeddy.github.io/ccw-hands-on-lab/).
 - **502 extracted code snippets** — Each code-bearing slide is exported as a numbered markdown file under `Script/workshop-code/`, organized by chapter and part for fast lookup.
 - **Bilingual coverage in code** — Python and TypeScript samples appear side by side across SDK material, with three authentication paths (Anthropic Direct, Amazon Bedrock, Vertex AI).
 - **Korean speaker notes per snippet** — Every extracted markdown file embeds the original Korean speaker script alongside the code.
@@ -39,7 +39,7 @@ Claude Code Deep Dive Workshop is a Korean-language technical curriculum deliver
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/whchoi98/claude-code-workshop.git
+git clone https://github.com/comeddy/claude-code-workshop.git
 cd claude-code-workshop
 
 # 2. Open the PDF for a given chapter from the latest edition (example: Chapter 1)
@@ -146,7 +146,7 @@ Claude Code Deep Dive Workshop은 발표 가능한 PDF 슬라이드 자료와 �
 
 - **에디션별 6개 챕터 PDF** — Overview, Agents & Subagents, Admin Setup, Settings, CLI Reference, Agent SDK. 각 커리큘럼 에디션은 날짜 디렉토리(`20260525/`, `20260703/`)로 제공됩니다. 최신 `20260703/` 에디션은 Claude Code 2.1.198 기준으로 새로 제작되었습니다.
 - **보조 기술 문서** — `tech_doc/`에 커리큘럼 외 심층 참고 자료인 `ClaudeCode-Architecture.pdf`와 `Claude_Cost_Efficiency.pdf`가 포함됩니다.
-- **핸즈온랩 가이드** — `ccw-hands-on-lab/`에 챕터별 랩 6개(Ch1–Ch6), 캡스톤 랩 4개(main, B, C, D), 참조 문서 3개(슬래시 커맨드, 플러그인, 디렉토리 구조)가 독립 실행형 HTML로 제공되며, 진입점 역할을 하는 `index.html` 포털 페이지가 포함됩니다. [whchoi98.github.io/ccw-hands-on-lab](https://whchoi98.github.io/ccw-hands-on-lab/)에 게시되어 있습니다.
+- **핸즈온랩 가이드** — `ccw-hands-on-lab/`에 챕터별 랩 6개(Ch1–Ch6), 캡스톤 랩 4개(main, B, C, D), 참조 문서 3개(슬래시 커맨드, 플러그인, 디렉토리 구조)가 독립 실행형 HTML로 제공되며, 진입점 역할을 하는 `index.html` 포털 페이지가 포함됩니다. 랩은 Anthropic 구독/Enterprise와 Claude Code on Bedrock 두 인증 경로를 모두 다룹니다. [comeddy.github.io/ccw-hands-on-lab](https://comeddy.github.io/ccw-hands-on-lab/)에 게시되어 있습니다.
 - **502개 추출 코드 스니펫** — 코드를 포함하는 모든 슬라이드가 `Script/workshop-code/` 아래에 챕터·파트 단위로 번호가 매겨진 마크다운으로 정리되어 빠른 검색이 가능합니다.
 - **코드 수준의 이중 언어 지원** — SDK 자료 전반에 Python과 TypeScript 예제가 나란히 제공되며, 3가지 인증 경로(Anthropic Direct, Amazon Bedrock, Vertex AI)를 모두 다룹니다.
 - **스니펫별 한국어 발표자 노트** — 추출된 모든 마크다운 파일에 코드와 함께 원본 한국어 발표 스크립트가 포함됩니다.
@@ -164,7 +164,7 @@ Claude Code Deep Dive Workshop은 발표 가능한 PDF 슬라이드 자료와 �
 
 ```bash
 # 1. 저장소 클론
-git clone https://github.com/whchoi98/claude-code-workshop.git
+git clone https://github.com/comeddy/claude-code-workshop.git
 cd claude-code-workshop
 
 # 2. 최신 에디션에서 원하는 챕터 PDF 열기 (예: Chapter 1)
