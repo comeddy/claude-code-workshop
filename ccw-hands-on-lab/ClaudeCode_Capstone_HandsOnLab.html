@@ -673,14 +673,18 @@ code.inline { white-space: normal; overflow-wrap: anywhere; }
     brainstorm → plan을 돌려 <strong>4-Phase 실행 계획을 승인</strong>합니다. CDK bootstrap은 백그라운드로 겹칩니다.
   </p>
 
-  <div class="step-title"><span class="step-no">1</span>사전 점검, Bedrock smoke까지 한 번에 (Claude Code on Bedrock 경우)</div>
+  <div class="step-title"><span class="step-no">1</span>사전 점검</div>
   <div class="code-wrap">
     <div class="code-head"><span class="code-label">Terminal, 전체 복사</span><button class="copy-btn" type="button">복사</button></div>
     <pre><code>aws sts get-caller-identity --query Account --output text
 node -v &amp;&amp; git --version &amp;&amp; jq --version
-npx cdk --version
+npx cdk --version</code></pre>
+  </div>
 
-# Global Inference Profile smoke (Sonnet 4.6)
+  <div class="step-title"><span class="step-no">2</span>Bedrock smoke (Claude Code on Bedrock 경우)</div>
+  <div class="code-wrap">
+    <div class="code-head"><span class="code-label">Terminal, 전체 복사</span><button class="copy-btn" type="button">복사</button></div>
+    <pre><code># Global Inference Profile smoke (Sonnet 4.6)
 aws bedrock-runtime converse \
   --model-id global.anthropic.claude-sonnet-4-6 \
   --messages '[{"role":"user","content":[{"text":"ping"}]}]' \
@@ -696,7 +700,7 @@ aws bedrock-runtime converse \
     신형 모델은 반드시 <strong>global. 프로파일 ID</strong>로 호출합니다. 여기서 막히면 부록 트러블슈팅의 모델 항목을 확인하세요. 이 관문만 넘으면 M3는 순항입니다.
   </div>
 
-  <div class="step-title"><span class="step-no">2</span>프로젝트 스캐폴드와 bootstrap (백그라운드)</div>
+  <div class="step-title"><span class="step-no">3</span>프로젝트 스캐폴드와 bootstrap (백그라운드)</div>
   <div class="code-wrap">
     <div class="code-head"><span class="code-label">Terminal, 전체 복사</span><button class="copy-btn" type="button">복사</button></div>
     <pre><code>mkdir -p ~/capstone/ops-center &amp;&amp; cd ~/capstone/ops-center
@@ -706,7 +710,7 @@ git add -A &amp;&amp; git commit -m "chore: cdk scaffold" 2&gt;/dev/null || true
 echo "bootstrap은 백그라운드 진행 중. tail -f /tmp/bootstrap.log 로 확인 가능"</code></pre>
   </div>
 
-  <div class="step-title"><span class="step-no">3</span>superpowers 설치</div>
+  <div class="step-title"><span class="step-no">4</span>superpowers 설치</div>
   <div class="code-wrap prompt">
     <div class="code-head"><span class="code-label">Claude 세션 입력 (claude 실행 후)</span><button class="copy-btn" type="button">복사</button></div>
     <pre><code>/plugin install superpowers@claude-plugins-official</code></pre>
@@ -722,7 +726,7 @@ echo "bootstrap은 백그라운드 진행 중. tail -f /tmp/bootstrap.log 로 �
     <code class="inline">/plugin install superpowers@superpowers-marketplace</code>를 사용하세요. 결과는 동일합니다.
   </div>
 
-  <div class="step-title"><span class="step-no">4</span>브레인스토밍, 요구사항은 이걸 그대로</div>
+  <div class="step-title"><span class="step-no">5</span>브레인스토밍, 요구사항은 이걸 그대로</div>
   <div class="code-wrap prompt">
     <div class="code-head"><span class="code-label">Claude 세션 입력, 전체 복사</span><button class="copy-btn" type="button">복사</button></div>
     <pre><code>/superpowers:brainstorming 다음 요구사항으로 "Claude Ops Center"를 설계하자.
@@ -746,7 +750,7 @@ echo "bootstrap은 백그라운드 진행 중. tail -f /tmp/bootstrap.log 로 �
     bootstrap은 계정 단위 작업이라 영향이 없습니다.
   </div>
 
-  <div class="step-title"><span class="step-no">5</span>계획 생성과 승인</div>
+  <div class="step-title"><span class="step-no">6</span>계획 생성과 승인</div>
   <div class="code-wrap prompt">
     <div class="code-head"><span class="code-label">Claude 세션 입력</span><button class="copy-btn" type="button">복사</button></div>
     <pre><code>/superpowers:writing-plans</code></pre>
@@ -759,7 +763,7 @@ echo "bootstrap은 백그라운드 진행 중. tail -f /tmp/bootstrap.log 로 �
 
   <div class="checkpoint dod">
     <div class="cp-title">DEFINITION OF DONE</div>
-    <label class="cp-item"><input type="checkbox" data-cp="m0a"><span>Bedrock smoke가 응답했고, bootstrap이 완료 또는 진행 중이다</span></label>
+    <label class="cp-item"><input type="checkbox" data-cp="m0a"><span>bootstrap이 완료 또는 진행 중이다 (Claude Code on Bedrock 경우 smoke 응답까지)</span></label>
     <label class="cp-item"><input type="checkbox" data-cp="m0b"><span>superpowers가 활성이고, 4-Phase 계획이 승인되었다</span></label>
   </div>
 </section>
