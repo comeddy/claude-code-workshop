@@ -689,7 +689,25 @@ npx cdk init app --language typescript
 git add -A &amp;&amp; git commit -m "chore: cdk scaffold" 2&gt;/dev/null || true</code></pre>
   </div>
 
-  <div class="step-title"><span class="step-no">2</span>superpowers 확인 또는 설치</div>
+  <div class="step-title"><span class="step-no">2</span>Bedrock smoke (Claude Code on Bedrock 경우)</div>
+  <div class="code-wrap">
+    <div class="code-head"><span class="code-label">Terminal, 전체 복사</span><button class="copy-btn" type="button">복사</button></div>
+    <pre><code># Global Inference Profile smoke (Sonnet 4.6)
+aws bedrock-runtime converse \
+  --model-id global.anthropic.claude-sonnet-4-6 \
+  --messages '[{"role":"user","content":[{"text":"ping"}]}]' \
+  --inference-config '{"maxTokens":30}' \
+  --query 'output.message.content[0].text' --output text</code></pre>
+  </div>
+  <div class="callout warn">
+    <span class="co-title">smoke가 실패한다면</span>
+    이 smoke는 Claude Code를 Bedrock 라우팅으로 쓰는 경우의 모델 액세스 확인용입니다.
+    M2에서 메딕 서브에이전트에 지정하는 <code class="inline">ANTHROPIC_MODEL</code>도 같은 액세스를 사용합니다.
+    <code class="inline">AccessDeniedException</code>은 Bedrock 콘솔의 모델 액세스 미승인이고,
+    신형 모델은 반드시 <strong>global. 프로파일 ID</strong>로 호출합니다. Anthropic 구독/Enterprise 로그인으로 쓰는 경우 이 스텝은 건너뜁니다.
+  </div>
+
+  <div class="step-title"><span class="step-no">3</span>superpowers 확인 또는 설치</div>
   <div class="code-wrap prompt">
     <div class="code-head"><span class="code-label">Claude 세션 입력</span><button class="copy-btn" type="button">복사</button></div>
     <pre><code>/plugin</code></pre>
@@ -699,7 +717,7 @@ git add -A &amp;&amp; git commit -m "chore: cdk scaffold" 2&gt;/dev/null || true
     세션을 재시작하세요 (마켓플레이스 미등록 시 <code class="inline">/plugin marketplace add anthropics/claude-plugins-official</code> 선행).
   </p>
 
-  <div class="step-title"><span class="step-no">3</span>브레인스토밍과 계획</div>
+  <div class="step-title"><span class="step-no">4</span>브레인스토밍과 계획</div>
   <div class="code-wrap prompt">
     <div class="code-head"><span class="code-label">Claude 세션 입력, 전체 복사</span><button class="copy-btn" type="button">복사</button></div>
     <pre><code>/superpowers:brainstorming 다음 요구사항으로 "Self-Healing 운영실"을 설계하자.
@@ -726,7 +744,7 @@ git add -A &amp;&amp; git commit -m "chore: cdk scaffold" 2&gt;/dev/null || true
 
   <div class="checkpoint dod">
     <div class="cp-title">DEFINITION OF DONE</div>
-    <label class="cp-item"><input type="checkbox" data-cp="m0a"><span>bootstrap이 완료 또는 진행 중이고 superpowers가 활성이다</span></label>
+    <label class="cp-item"><input type="checkbox" data-cp="m0a"><span>bootstrap이 완료 또는 진행 중이고 superpowers가 활성이다 (Claude Code on Bedrock 경우 smoke 응답까지)</span></label>
     <label class="cp-item"><input type="checkbox" data-cp="m0b"><span>4-Phase 계획이 승인되었다</span></label>
   </div>
 </section>

@@ -688,7 +688,27 @@ git add -A &amp;&amp; git commit -m "chore: cdk scaffold" 2&gt;/dev/null || true
     <code class="inline">/plugin install superpowers@claude-plugins-official</code> 후 세션 재시작입니다.
   </p>
 
-  <div class="step-title"><span class="step-no">2</span>브레인스토밍과 계획</div>
+  <div class="step-title"><span class="step-no">2</span>Bedrock smoke (Claude Code on Bedrock 경우)</div>
+  <div class="code-wrap">
+    <div class="code-head"><span class="code-label">Terminal, 전체 복사</span><button class="copy-btn" type="button">복사</button></div>
+    <pre><code># Global Inference Profile smoke (Sonnet 4.6)
+aws bedrock-runtime converse \
+  --model-id global.anthropic.claude-sonnet-4-6 \
+  --messages '[{"role":"user","content":[{"text":"ping"}]}]' \
+  --inference-config '{"maxTokens":30}' \
+  --query 'output.message.content[0].text' --output text</code></pre>
+  </div>
+  <div class="callout warn">
+    <span class="co-title">smoke가 실패한다면</span>
+    이 smoke는 Claude Code의 인증(Anthropic 구독/Enterprise 로그인)과는 무관합니다.
+    M3에서 배포할 <strong>ask Lambda</strong>가 사용할 이 AWS 계정의 Bedrock 모델 액세스를 미리 확인하는 관문입니다.
+    이 캡스톤은 서가 입고(M1)에서 임베딩 모델 <code class="inline">amazon.titan-embed-text-v2:0</code>도 사용하므로 함께 액세스가 승인되어 있어야 합니다.
+    <code class="inline">AccessDeniedException</code>은 Bedrock 콘솔의 모델 액세스 미승인,
+    <code class="inline">ValidationException</code>(on-demand 미지원)은 베이스 모델 ID를 쓴 경우입니다.
+    신형 모델은 반드시 <strong>global. 프로파일 ID</strong>로 호출합니다.
+  </div>
+
+  <div class="step-title"><span class="step-no">3</span>브레인스토밍과 계획</div>
   <div class="code-wrap prompt">
     <div class="code-head"><span class="code-label">Claude 세션 입력, 전체 복사</span><button class="copy-btn" type="button">복사</button></div>
     <pre><code>/superpowers:brainstorming 다음 요구사항으로 "사내 사서(지식 검색) 서비스"를 설계하자.
@@ -720,7 +740,7 @@ git add -A &amp;&amp; git commit -m "chore: cdk scaffold" 2&gt;/dev/null || true
 
   <div class="checkpoint dod">
     <div class="cp-title">DEFINITION OF DONE</div>
-    <label class="cp-item"><input type="checkbox" data-cp="m0a"><span>bootstrap 완료/진행 중, superpowers 활성</span></label>
+    <label class="cp-item"><input type="checkbox" data-cp="m0a"><span>bootstrap 완료/진행 중, superpowers 활성 (Claude Code on Bedrock 경우 smoke 응답까지)</span></label>
     <label class="cp-item"><input type="checkbox" data-cp="m0b"><span>4-Phase 계획 승인</span></label>
   </div>
 </section>
