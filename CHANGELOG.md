@@ -23,7 +23,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Add `ccw-hands-on-lab/`, a hands-on lab archive of self-contained HTML guides: six chapter labs (Ch1–Ch6) and four capstone labs (main, B, C, D), entered through an `index.html` portal page.
 - Add three reference pages to the lab archive covering slash commands, plugins, and the Claude Code directory structure.
 - Add GitHub link cards for the 20260703 slide sources and `tech_doc/` to the lab portal page.
-- Publish the hands-on lab guides to GitHub Pages at [whchoi98.github.io/ccw-hands-on-lab](https://whchoi98.github.io/ccw-hands-on-lab/).
+- Publish the hands-on lab guides to GitHub Pages at [comeddy.github.io/ccw-hands-on-lab](https://comeddy.github.io/ccw-hands-on-lab/).
 
 ### Changed
 
@@ -31,6 +31,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Group supplementary technical documents under `tech_doc/`, separate from the chapter curriculum.
 - Update `README.md` paths, project structure tree, and usage examples to reflect the edition directories and `tech_doc/`.
 - Update `README.md` features, prerequisites, and project structure tree to document `ccw-hands-on-lab/` and link the published lab portal.
+- Revise the Chapter 2 hands-on lab content.
+- Point the lab portal GitHub link cards at the `comeddy/claude-code-workshop` repository.
+- Rename superpowers workflow commands across the capstone labs and plugin reference to their namespaced forms: `/superpowers:brainstorming`, `/superpowers:writing-plans`, `/superpowers:executing-plans`.
+- Split the Bedrock smoke test into a dedicated Claude Code on Bedrock-only step in Mission 0 of all four capstone labs, with per-capstone callouts explaining what the smoke validates.
+- Update the lab portal hero metadata to present both authentication paths: Anthropic subscription/Enterprise or Claude Code on Bedrock.
 
 ## [1.0.1] - 2026-05-27
 
@@ -91,7 +96,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - 챕터별 랩 6개(Ch1–Ch6)와 캡스톤 랩 4개(main, B, C, D)를 독립 실행형 HTML로 담은 핸즈온랩 아카이브 `ccw-hands-on-lab/`을 `index.html` 포털 페이지와 함께 추가.
 - 슬래시 커맨드, 플러그인, Claude Code 디렉토리 구조를 다루는 참조 문서 3종을 랩 아카이브에 추가.
 - 랩 포털 페이지에 20260703 강의자료와 `tech_doc/`으로 연결되는 GitHub 링크 카드 추가.
-- 핸즈온랩 가이드를 GitHub Pages([whchoi98.github.io/ccw-hands-on-lab](https://whchoi98.github.io/ccw-hands-on-lab/))에 게시.
+- 핸즈온랩 가이드를 GitHub Pages([comeddy.github.io/ccw-hands-on-lab](https://comeddy.github.io/ccw-hands-on-lab/))에 게시.
 
 ### Changed
 
@@ -99,6 +104,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - 보조 기술 문서를 챕터 커리큘럼과 분리하여 `tech_doc/` 아래로 정리.
 - 에디션 디렉토리와 `tech_doc/` 구조에 맞게 `README.md`의 경로, 프로젝트 구조 트리, 사용 예시 갱신.
 - `ccw-hands-on-lab/` 디렉토리와 게시된 랩 포털 링크를 반영하도록 `README.md`의 주요 기능, 사전 요구 사항, 프로젝트 구조 트리 갱신.
+- Chapter 2 핸즈온랩 콘텐츠 개정.
+- 랩 포털의 GitHub 링크 카드를 `comeddy/claude-code-workshop` 저장소로 변경.
+- 캡스톤 랩과 플러그인 참조 문서의 superpowers 워크플로 커맨드를 네임스페이스 표기(`/superpowers:brainstorming`, `/superpowers:writing-plans`, `/superpowers:executing-plans`)로 통일.
+- 캡스톤 랩 4종의 Mission 0에서 Bedrock smoke 테스트를 Claude Code on Bedrock 경로 전용 스텝으로 분리하고, 캡스톤별 검증 대상을 설명하는 콜아웃 추가.
+- Anthropic 구독/Enterprise와 Claude Code on Bedrock 두 인증 경로를 모두 안내하도록 랩 포털 히어로 메타 문구 갱신.
 
 ## [1.0.1] - 2026-05-27
 
