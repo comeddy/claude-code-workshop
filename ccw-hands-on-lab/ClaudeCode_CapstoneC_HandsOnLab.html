@@ -690,7 +690,7 @@ git add -A &amp;&amp; git commit -m "chore: cdk scaffold" 2&gt;/dev/null || true
   <div class="step-title"><span class="step-no">2</span>브레인스토밍과 계획</div>
   <div class="code-wrap prompt">
     <div class="code-head"><span class="code-label">Claude 세션 입력, 전체 복사</span><button class="copy-btn" type="button">복사</button></div>
-    <pre><code>/brainstorm 다음 요구사항으로 "AI 카페 주문 서비스"를 설계하자.
+    <pre><code>/superpowers:brainstorming 다음 요구사항으로 "AI 카페 주문 서비스"를 설계하자.
 1) DB: DynamoDB 단일 테이블(pk/sk). 메뉴는 pk=menu(sk=메뉴id, name/price/options 맵),
    주문은 pk=order(sk=시각#id, customer/lines/total/status/note/source)
 2) 백엔드 Lambda 2종(Node 22) + HTTP API(CORS):

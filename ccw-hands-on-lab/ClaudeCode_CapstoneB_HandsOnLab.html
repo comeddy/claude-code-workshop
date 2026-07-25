@@ -702,7 +702,7 @@ git add -A &amp;&amp; git commit -m "chore: cdk scaffold" 2&gt;/dev/null || true
   <div class="step-title"><span class="step-no">3</span>브레인스토밍과 계획</div>
   <div class="code-wrap prompt">
     <div class="code-head"><span class="code-label">Claude 세션 입력, 전체 복사</span><button class="copy-btn" type="button">복사</button></div>
-    <pre><code>/brainstorm 다음 요구사항으로 "Self-Healing 운영실"을 설계하자.
+    <pre><code>/superpowers:brainstorming 다음 요구사항으로 "Self-Healing 운영실"을 설계하자.
 1) 대상 서비스: CDK TypeScript 단일 스택(PatientStack), HTTP API + Lambda(Node 22) + DynamoDB 단일 테이블(pk/sk)
    - GET /health: flags 항목(pk=flags, sk=flags)의 force_error가 true이거나 테이블 접근 실패면 500, 정상이면 200 {"ok":true}
    - GET /order: 정상일 때 주문 항목을 기록하고 order_id 반환

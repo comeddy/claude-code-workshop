@@ -691,7 +691,7 @@ git add -A &amp;&amp; git commit -m "chore: cdk scaffold" 2&gt;/dev/null || true
   <div class="step-title"><span class="step-no">2</span>브레인스토밍과 계획</div>
   <div class="code-wrap prompt">
     <div class="code-head"><span class="code-label">Claude 세션 입력, 전체 복사</span><button class="copy-btn" type="button">복사</button></div>
-    <pre><code>/brainstorm 다음 요구사항으로 "사내 사서(지식 검색) 서비스"를 설계하자.
+    <pre><code>/superpowers:brainstorming 다음 요구사항으로 "사내 사서(지식 검색) 서비스"를 설계하자.
 1) DB: DynamoDB 단일 테이블(pk/sk). 청크는 pk=chunk(sk=docId#순번, docId/title/text/vector 숫자배열),
    서가 목록은 pk=shelf(sk=docId, title/chunks/at)
 2) 순수 로직은 lib 모듈로 분리: chunkText(빈 줄 문단 병합, 기본 240자), cosine, rankChunks(top-k).
