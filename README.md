@@ -127,7 +127,7 @@ This project is distributed under **Proprietary** terms. Internal use, private d
 
 ## Contact
 
-- Maintainer: **comeddy**
+- Maintainer: **Youngjin Kim**
 - Email: comeddy@gmail.com
 - GitHub: [github.com/comeddy](https://github.com/comeddy)
 - Issues: open an issue on the repository hosting this project.
@@ -252,7 +252,7 @@ claude-code-workshop/
 
 ## 연락처
 
-- 메인테이너: **comeddy**
+- 메인테이너: **김영진(Youngjin Kim)**
 - 이메일: comeddy@gmail.com
 - GitHub: [github.com/comeddy](https://github.com/comeddy)
 - 이슈: 이 프로젝트가 호스팅된 저장소에 이슈를 등록해 주세요.
