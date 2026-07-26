@@ -706,7 +706,18 @@ aws bedrock-runtime converse \
     신형 모델은 반드시 <strong>global. 프로파일 ID</strong>로 호출합니다. 이 관문만 넘으면 M3는 순항입니다.
   </div>
 
-  <div class="step-title"><span class="step-no">3</span>브레인스토밍과 계획</div>
+  <div class="step-title"><span class="step-no">3</span>claude-hud 설치, 상태줄 HUD</div>
+  <div class="code-wrap prompt">
+    <div class="code-head"><span class="code-label">Claude 세션 입력, 전체 복사</span><button class="copy-btn" type="button">복사</button></div>
+    <pre><code>/plugin marketplace add jarrodwatts/claude-hud
+/plugin install claude-hud@claude-hud
+/reload-plugins
+/claude-hud:setup</code></pre>
+  </div>
+  <p class="body">설치가 끝나면 세션 하단 상태줄에 모델, 컨텍스트 사용량, 세션 상태가 표시됩니다.
+  긴 캡스톤에서 컨텍스트가 얼마나 남았는지 한눈에 보이므로, Phase 사이에 정리 시점을 잡기 좋습니다.</p>
+
+  <div class="step-title"><span class="step-no">4</span>브레인스토밍과 계획</div>
   <div class="code-wrap prompt">
     <div class="code-head"><span class="code-label">Claude 세션 입력, 전체 복사</span><button class="copy-btn" type="button">복사</button></div>
     <pre><code>/superpowers:brainstorming 다음 요구사항으로 "AI 카페 주문 서비스"를 설계하자.
@@ -742,6 +753,7 @@ aws bedrock-runtime converse \
     <div class="cp-title">DEFINITION OF DONE</div>
     <label class="cp-item"><input type="checkbox" data-cp="m0a"><span>bootstrap 완료/진행 중, superpowers 활성 (Claude Code on Bedrock 경우 smoke 응답까지)</span></label>
     <label class="cp-item"><input type="checkbox" data-cp="m0b"><span>4-Phase 계획 승인</span></label>
+    <label class="cp-item"><input type="checkbox" data-cp="m0hud"><span>claude-hud 상태줄이 세션에 표시된다</span></label>
   </div>
 </section>
 <!-- ================= M1 ================= -->
