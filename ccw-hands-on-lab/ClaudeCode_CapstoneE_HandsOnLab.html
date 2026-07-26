@@ -817,6 +817,12 @@ echo "$URL" &amp;&amp; curl -s -o /dev/null -w "%{http_code}\n" "$URL"</code></p
   </div>
   <p class="body">브라우저로 URL을 열어 한 판 클리어하고, <strong>Slack 채널에 URL을 공유</strong>하세요.
   서로의 레벨을 플레이해 보는 것까지가 개장입니다.</p>
+  <div class="code-wrap prompt">
+    <div class="code-head"><span class="code-label">Claude 세션 입력, 플레이 후 즉석 튜닝</span><button class="copy-btn" type="button">복사</button></div>
+    <pre><code>점프가 낮아 조정 좀 해줘</code></pre>
+  </div>
+  <p class="body">플레이 감각이 곧 요구사항입니다. 이렇게 한 줄로 지시하면 Claude가 점프 물리 값을 찾아 고칩니다.
+  수정 후 <code class="inline">npx cdk deploy --require-approval never</code>로 재배포하고 새로고침해 손맛을 다시 확인하세요.</p>
   <div class="checkpoint">
     <div class="cp-title">DEFINITION OF DONE</div>
     <label class="cp-item"><input type="checkbox" data-cp="m4a"><span>CloudFront URL에서 게임이 플레이된다 (curl 200)</span></label>
