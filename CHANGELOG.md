@@ -14,6 +14,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+### Added
+
+- Add the Capstone E hands-on lab (`ClaudeCode_CapstoneE_HandsOnLab.html`), an agentic game-development mission that builds a Canvas platformer starring Clawd and deploys it via S3/CloudFront without Bedrock, and add its portal card.
+
 ## [1.1.0] - 2026-07-25
 
 ### Added
@@ -89,6 +93,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 이 문서는 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)를 기반으로 하며, [Semantic Versioning](https://semver.org/spec/v2.0.0.html)을 따릅니다.
 
 ## [Unreleased]
+
+### Added
+
+- Clawd가 주인공인 Canvas 플랫포머를 Bedrock 없이 S3/CloudFront로 배포하는 에이전틱 게임 개발 미션 Capstone E 랩(`ClaudeCode_CapstoneE_HandsOnLab.html`)과 포털 카드 추가.
 
 ## [1.1.0] - 2026-07-25
 
