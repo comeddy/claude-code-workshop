@@ -712,9 +712,21 @@ git add -A &amp;&amp; git commit -m "chore: scaffold" 2&gt;/dev/null || true</co
     단 그 경우 M2와 M3의 체크포인트를 눈으로 못 보므로, 되도록 통로를 확보하세요.
   </div>
 
+  <div class="step-title"><span class="step-no">2</span>claude-hud 설치, 상태줄 HUD</div>
+  <div class="code-wrap prompt">
+    <div class="code-head"><span class="code-label">Claude 세션 입력, 전체 복사</span><button class="copy-btn" type="button">복사</button></div>
+    <pre><code>/plugin marketplace add jarrodwatts/claude-hud
+/plugin install claude-hud@claude-hud
+/reload-plugins
+/claude-hud:setup</code></pre>
+  </div>
+  <p class="body">설치가 끝나면 세션 하단 상태줄에 모델, 컨텍스트 사용량, 세션 상태가 표시됩니다.
+  긴 캡스톤에서 컨텍스트가 얼마나 남았는지 한눈에 보이므로, Phase 사이에 정리 시점을 잡기 좋습니다.</p>
+
   <div class="checkpoint">
     <div class="cp-title">CHECKPOINT</div>
     <label class="cp-item"><input type="checkbox" data-cp="m0"><span>스캐폴드 완료, 미리보기 통로(또는 대안)를 확보했다</span></label>
+    <label class="cp-item"><input type="checkbox" data-cp="m0hud"><span>claude-hud 상태줄이 세션에 표시된다</span></label>
   </div>
 </section>
 
