@@ -18,6 +18,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 - Add the Capstone E hands-on lab (`ClaudeCode_CapstoneE_HandsOnLab.html`), an agentic game-development mission that builds a Canvas platformer starring Clawd and deploys it via S3/CloudFront without Bedrock, and add its portal card.
 - Add the Capstone F hands-on lab (`ClaudeCode_CapstoneF_HandsOnLab.html`), a generative-art exhibition mission that renders two Canvas artworks, extracts a shared contract from the second, and deploys via S3/CloudFront without Bedrock, and add its portal card.
+- Add a claude-hud status-line HUD install step (marketplace add, install, reload, setup) to Mission 0 of all six capstone labs, with a checklist item confirming the status line is visible.
 
 ## [1.1.0] - 2026-07-25
 
@@ -99,6 +100,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 - Clawd가 주인공인 Canvas 플랫포머를 Bedrock 없이 S3/CloudFront로 배포하는 에이전틱 게임 개발 미션 Capstone E 랩(`ClaudeCode_CapstoneE_HandsOnLab.html`)과 포털 카드 추가.
 - Canvas 제너러티브 아트 두 점을 그리고 두 번째 작품에서 공통 계약을 추출해 Bedrock 없이 S3/CloudFront로 전시를 개장하는 Capstone F 랩(`ClaudeCode_CapstoneF_HandsOnLab.html`)과 포털 카드 추가.
+- 캡스톤 랩 6종의 Mission 0에 claude-hud 상태줄 HUD 설치 스텝(marketplace add, install, reload, setup)과 상태줄 표시 확인 체크 항목 추가.
 
 ## [1.1.0] - 2026-07-25
 
