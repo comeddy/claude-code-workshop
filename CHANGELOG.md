@@ -18,6 +18,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 - Restyle the GS bootcamp eDM (`ccw-hands-on-lab/gs-edm.html`) below the schedule in the Deep Dive eDM format: linked participant-info rows, a self-paced lab and reference list (Ch6, Reference 1-3, slide PDFs, tech docs), a Hands-on Lab portal banner, and a post-workshop survey card with QR code, themed with the page's light navy and orange palette to match the schedule.
 - Point the GS bootcamp eDM survey card and its QR code to the GS survey (`pulse.amazon/survey/81FBMO8Q`).
+- Point the GS bootcamp eDM slide-PDF links to the `20260905` folder (Chapter 1-6 PDFs).
 
 ## [1.2.0] - 2026-07-26
 
@@ -108,6 +109,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 - GS 부트캠프 eDM(`ccw-hands-on-lab/gs-edm.html`)의 일정표 아래를 Deep Dive eDM 포맷으로 개편: 링크가 걸린 참가 안내 행, 자율 실습과 참고 자료 목록(Ch6, Reference 1-3, 강의자료 PDF, Tech Doc), Hands-on Lab 포털 배너, QR 코드가 포함된 교육 후 설문 카드를 일정표와 같은 라이트 네이비, 오렌지 팔레트로 배치.
 - GS 부트캠프 eDM의 설문 카드 링크와 QR 코드를 GS 전용 설문(`pulse.amazon/survey/81FBMO8Q`)으로 교체.
+- GS 부트캠프 eDM의 강의자료 PDF 링크를 `20260905` 폴더(Chapter 1-6 PDF)로 교체.
 
 ## [1.2.0] - 2026-07-26
 
