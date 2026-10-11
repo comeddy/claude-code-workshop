@@ -21,6 +21,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Point the GS bootcamp eDM slide-PDF links to the `20260905` folder (Chapter 1-6 PDFs).
 - Point the GS bootcamp eDM portal, Ch6, and Reference links to the `claude-code-labs` site, renumbering the Reference cards to its order (Directory, Commands, Plugins).
 - Point the GS bootcamp eDM hero button and schedule chapter/capstone tags to the `claude-code-labs` site, so the page no longer links to `ccw-hands-on-lab`.
+- Note on the GS bootcamp eDM slide-PDF card that Ch3 (Admin Setup) is excluded from this workshop.
 
 ## [1.2.0] - 2026-07-26
 
@@ -114,6 +115,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - GS 부트캠프 eDM의 강의자료 PDF 링크를 `20260905` 폴더(Chapter 1-6 PDF)로 교체.
 - GS 부트캠프 eDM의 포털, Ch6, Reference 링크를 `claude-code-labs` 사이트로 연결하고, Reference 카드 번호를 해당 사이트 순서(디렉토리, 커맨드, 플러그인)에 맞춤.
 - GS 부트캠프 eDM의 상단 버튼과 일정표의 챕터, 캡스톤 태그도 `claude-code-labs` 사이트로 연결해 `ccw-hands-on-lab` 링크를 모두 제거.
+- GS 부트캠프 eDM의 강의자료 PDF 카드에 Ch3(Admin Setup)는 본 워크샵에서 제외된다는 안내 추가.
 
 ## [1.2.0] - 2026-07-26
 
