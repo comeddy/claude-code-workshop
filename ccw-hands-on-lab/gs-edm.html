@@ -128,6 +128,63 @@
     padding: 14px 18px; font-size: 14px; color: #7a5c1e; margin-top: 14px;
   }
   footer { text-align: center; color: var(--dim); font-size: 13px; padding: 26px 20px 50px; border-top: 1px solid var(--line); }
+  /* ── 일정 아래: eDM 포맷 (다크 메일 컨테이너) ── */
+  .edm {
+    --mail: #12181F; --ecard: #1B242E; --code: #0C1117; --eline: #262F3B;
+    --text: #E8ECF1; --muted: #8B96A5; --charcoal: #C7CDD6; --lavender: #c9a2ff; --green: #3FB950;
+    background: var(--mail); color: var(--text); border: 1px solid var(--eline);
+    border-radius: 16px; overflow: hidden; margin-top: 8px;
+    word-break: keep-all; overflow-wrap: break-word;
+  }
+  .edm a { color: inherit; text-decoration: none; }
+  .edm .sec { padding: 32px 40px; margin: 0; border-bottom: 1px solid var(--eline); }
+  .edm .sec-label { color: var(--orange); font-size: 12px; font-weight: 800; letter-spacing: .16em; text-align: center; }
+  .edm h2 { font-size: 22px; text-align: center; margin: 7px 0 0; padding: 0; border: 0; }
+  .edm .meta { color: var(--muted); font-size: 14px; text-align: center; margin-top: 5px; }
+  .edm .refs { display: grid; gap: 7px; margin-top: 16px; }
+  .edm .ref {
+    display: grid; grid-template-columns: 58px 1fr auto; gap: 12px; align-items: center;
+    background: var(--ecard); border: 1px solid var(--eline); border-radius: 10px; padding: 12px 15px;
+  }
+  .edm a.ref:hover { border-color: var(--orange); }
+  .edm .ref .tag {
+    font-size: 12.2px; font-weight: 800; letter-spacing: .06em; color: var(--lavender);
+    background: var(--code); border: 1px solid var(--eline); border-radius: 7px; text-align: center; padding: 7px 0;
+  }
+  .edm .ref h3 { font-size: 16.2px; }
+  .edm .ref p { color: var(--muted); font-size: 13.8px; margin-top: 3px; }
+  .edm .ref .go { color: var(--orange); font-size: 13.4px; font-weight: 700; white-space: nowrap; }
+  .edm .btn {
+    display: inline-block; font-size: 14.5px; font-weight: 700; border-radius: 24px; padding: 11px 22px;
+    border: 1px solid var(--eline); background: rgba(255,255,255,.04); color: var(--charcoal);
+  }
+  .edm .btn.primary { background: var(--orange); border-color: var(--orange); color: #16110A; }
+  .edm .cta { display: flex; flex-wrap: wrap; justify-content: center; gap: 9px; margin-top: 20px; }
+  .edm .banner {
+    display: block; text-align: center; padding: 32px 40px;
+    background: radial-gradient(90% 120% at 50% 0%, rgba(122,63,242,.16), transparent 70%), var(--code);
+    border-bottom: 1px solid var(--eline);
+  }
+  .edm .banner h3 { font-size: 19px; }
+  .edm .banner p { color: var(--charcoal); font-size: 15px; margin-top: 7px; }
+  .edm .survey {
+    display: flex; align-items: center; gap: 20px; margin-top: 16px; padding: 16px 18px;
+    border: 1px solid var(--eline); border-radius: 12px; background: var(--ecard);
+  }
+  .edm a.survey:hover { border-color: var(--orange); }
+  .edm .survey img { border-radius: 8px; display: block; flex: none; }
+  .edm .survey h3 { margin: 0 0 6px; }
+  .edm .survey p { margin: 0; font-size: 14px; line-height: 1.75; color: var(--charcoal); }
+  .edm .survey .btn { flex: none; }
+  .edm .foot { background: var(--code); padding: 28px 40px 32px; text-align: center; color: var(--muted); font-size: 13.4px; line-height: 1.9; }
+  .edm .foot .who { color: var(--charcoal); font-weight: 700; font-size: 14.5px; }
+  .edm .foot a { color: var(--orange); }
+  @media (max-width: 560px) {
+    .edm .sec, .edm .banner, .edm .foot { padding-left: 18px; padding-right: 18px; }
+    .edm .ref { grid-template-columns: 52px 1fr; }
+    .edm .ref .go { grid-column: 2; }
+    .edm .survey { flex-direction: column; text-align: center; }
+  }
 </style>
 </head>
 <body>
@@ -225,31 +282,103 @@
   <p class="note">※ 챕터 번호는 Workshop Studio 자료 기준이며, Ch3 Admin Setup(SSO 연동·보안 정책·DLP 등 관리 설정)은 본 워크샵에서 제외되어 관리자 대상 별도 자료로 안내드립니다.</p>
 </section>
 
-<section>
-  <h2>참가 안내</h2>
-  <div class="info-grid">
-    <div class="info-card">
-      <h3>&#127890; 준비물</h3>
-      <ul>
-        <li>웹 브라우저가 설치된 노트북 (Chrome 권장)</li>
-        <li>워크샵 자료: <a href="https://comeddy.github.io/ccw-hands-on-lab/" target="_blank" rel="noopener">Hands-on Lab 포털</a></li>
-        <li>실습 환경: <a href="https://catalog.us-east-1.prod.workshops.aws/workshops/b2f3455f-9d2e-4f63-9c3c-fc3fee87729c/ko-KR" target="_blank" rel="noopener">Workshop Studio 카탈로그</a> (실습 계정 접속 URL은 당일 별도 안내)</li>
-      </ul>
+<div class="edm">
+  <section class="sec">
+    <div class="sec-label">BEFORE YOU COME</div>
+    <h2>참가 안내</h2>
+    <div class="meta">노트북과 웹 브라우저만 있으면 됩니다. 실습 환경은 자동으로 제공됩니다.</div>
+    <div class="refs">
+      <a class="ref" href="https://comeddy.github.io/ccw-hands-on-lab/" target="_blank" rel="noopener">
+        <span class="tag" style="color:var(--orange)">포털</span>
+        <span><h3>Hands-on Lab 포털</h3><p>워크샵 자료 전체. 챕터 랩과 Capstone Mission, Reference를 한 화면에서 엽니다.</p></span>
+        <span class="go">열기 →</span>
+      </a>
+      <a class="ref" href="https://catalog.us-east-1.prod.workshops.aws/workshops/b2f3455f-9d2e-4f63-9c3c-fc3fee87729c/ko-KR" target="_blank" rel="noopener">
+        <span class="tag" style="color:var(--orange)">LAB</span>
+        <span><h3>Workshop Studio 카탈로그</h3><p>실습 환경 안내 페이지. 실습 계정 접속 URL은 당일 별도 안내합니다.</p></span>
+        <span class="go">열기 →</span>
+      </a>
+      <div class="ref">
+        <span class="tag">준비물</span>
+        <span><h3>노트북 + 웹 브라우저 (Chrome 권장)</h3><p>별도의 AWS 계정이나 로컬 개발 환경 설정은 필요 없습니다.</p></span>
+      </div>
+      <div class="ref">
+        <span class="tag">진행</span>
+        <span><h3>AWS 담당자가 화면을 공유하며 진행</h3><p>실습은 화면의 가이드를 따라 함께 진행합니다.</p></span>
+      </div>
+      <div class="ref">
+        <span class="tag">VPN</span>
+        <span><h3>실습 중에는 VPN 해제 권장</h3><p>VPN이 연결되어 있으면 Workshop Studio 접속에 영향을 줄 수 있습니다.</p></span>
+      </div>
     </div>
-    <div class="info-card">
-      <h3>&#128161; 참고사항</h3>
-      <ul>
-        <li>별도의 AWS 계정이나 로컬 개발 환경 설정은 필요 없습니다. 모든 실습 환경은 자동으로 제공됩니다.</li>
-        <li>실습은 AWS 담당자가 화면을 공유하며 가이드에 따라 함께 진행합니다.</li>
-        <li>VPN이 연결되어 있으면 Workshop Studio 접속에 영향을 줄 수 있으므로, 실습 시에는 해제를 권장합니다.</li>
-      </ul>
+  </section>
+
+  <section class="sec">
+    <div class="sec-label">SELF-PACED / REFERENCE</div>
+    <h2>자율 실습과 참고 자료</h2>
+    <div class="meta">정규 세션 밖에서 이어 갈 랩과, 랩 진행 중 옆에 띄워 두는 문서</div>
+    <div class="refs">
+      <a class="ref" href="https://comeddy.github.io/ccw-hands-on-lab/ClaudeCode_Ch6_HandsOnLab.html" target="_blank" rel="noopener">
+        <span class="tag" style="color:var(--orange)">CH 06</span>
+        <span><h3>Agent SDK, Claude Code를 코드에서 부른다</h3><p>터미널의 에이전트 루프를 내 프로그램 안으로. query, resume 대화 메모리, 커스텀 도구.</p></span>
+        <span class="go">랩 열기 →</span>
+      </a>
+      <a class="ref" href="https://comeddy.github.io/ccw-hands-on-lab/ClaudeCode_Reference1_Commands.html" target="_blank" rel="noopener">
+        <span class="tag">REF 1</span>
+        <span><h3>슬래시 커맨드, 세션을 조종하는 레버</h3><p>작업 흐름, 병렬, 검수, 세션 이동, 상태로 묶은 선별 목록과 워크샵 등장 위치.</p></span>
+        <span class="go">열기 →</span>
+      </a>
+      <a class="ref" href="https://comeddy.github.io/ccw-hands-on-lab/ClaudeCode_Reference2_Plugins.html" target="_blank" rel="noopener">
+        <span class="tag">REF 2</span>
+        <span><h3>플러그인, 팀의 하네스를 배포하는 단위</h3><p>설치 3동사와 워크샵 3종(superpowers, project-init, harness-eval)의 역할, 신뢰 가드.</p></span>
+        <span class="go">열기 →</span>
+      </a>
+      <a class="ref" href="https://comeddy.github.io/ccw-hands-on-lab/ClaudeCode_Reference3_Directory.html" target="_blank" rel="noopener">
+        <span class="tag">REF 3</span>
+        <span><h3>디렉토리 구조, 무엇이 어디에 있는가</h3><p>~/.claude와 .claude, managed의 세 층 지도와 설정 우선순위, CLAUDE.md 계층 합산.</p></span>
+        <span class="go">열기 →</span>
+      </a>
+      <a class="ref" href="https://github.com/whchoi98/claude-code-workshop/tree/main/20260901" target="_blank" rel="noopener">
+        <span class="tag" style="color:var(--green)">PDF</span>
+        <span><h3>강의자료 PDF 전체</h3><p>Chapter 1-5 슬라이드 PDF와 랩 문서 원본이 모여 있는 저장소 폴더입니다.</p></span>
+        <span class="go">GitHub →</span>
+      </a>
+      <a class="ref" href="https://github.com/whchoi98/claude-code-workshop/tree/main/tech_doc" target="_blank" rel="noopener">
+        <span class="tag" style="color:var(--green)">DOC</span>
+        <span><h3>기타 Tech Doc</h3><p>워크샵 본편 밖의 기술 문서 모음 (tech_doc 폴더).</p></span>
+        <span class="go">GitHub →</span>
+      </a>
     </div>
-  </div>
-</section>
+  </section>
+
+  <a class="banner" href="https://comeddy.github.io/ccw-hands-on-lab/" target="_blank" rel="noopener">
+    <h3>Hands-on Lab 포털 열기</h3>
+    <p>챕터 랩 전체와 Capstone Mission, Reference 3부작을 한 화면에서 진행 상황과 함께 관리합니다.</p>
+    <div class="cta"><span class="btn primary">index.html 열기 →</span></div>
+  </a>
+
+  <section class="sec" id="after">
+    <div class="sec-label">AFTER THE WORKSHOP</div>
+    <h2>교육 후 설문</h2>
+    <a class="survey" href="https://pulse.amazon/survey/SS1UGB7R?p=0" target="_blank" rel="noopener">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXIAAAFyCAIAAABnRsZeAAAHRUlEQVR4nO3cPZIDNRhFUYYiJSFi/6sjImEBTUokfnTFp/ack4/dY7tuKXilr+d5fgDo/Dj9AMCnkRUgJitATFaAmKwAMVkBYrICxGQFiMkKEJMVICYrQExWgJisADFZAWKyAsRkBYjJChCTFSAmK0BMVoCYrAAxWQFisgLEZAWIyQoQkxUgJitATFaAmKwAMVkBYrICxGQFiMkKEJMVICYrQExWgJisADFZAWKyAsR+mnrjn3/5deqtD/nj99/+89+uP42dVz73vjvf4J2fld9kxWkFiMkKEJMVICYrQExWgJisADFZAWKyAsRkBYiNrWzXptaBazsrzDv3rFPve27Pem6D+3m/yXOcVoCYrAAxWQFisgLEZAWIyQoQkxUgJitATFaA2KUr27Vzy8JzS8o774XdeeX1M3+3G2ff+Js8x2kFiMkKEJMVICYrQExWgJisADFZAWKyAsRkBYi9cmX7ec6tTt+4Z71zR8s/57QCxGQFiMkKEJMVICYrQExWgJisADFZAWKyAsSsbP8n57aw59536hbVnTt033jz6+dxWgFisgLEZAWIyQoQkxUgJitATFaAmKwAMVkBYq9c2b5xSfl5i9WdG2fvXBXveONv8hynFSAmK0BMVoCYrAAxWQFisgLEZAWIyQoQkxUgdunKdmfBeadze9Y3/u3a1Puufd5v8hynFSAmK0BMVoCYrAAxWQFisgLEZAWIyQoQkxUg9vU8z/Qz8DfO3Rp77ubXqZtup+6y5a+cVoCYrAAxWQFisgLEZAWIyQoQkxUgJitATFaA2NhdtnfesTq1ST1n6k7ZqZtup0ztle/81TmtADFZAWKyAsRkBYjJChCTFSAmK0BMVoCYrACxsZXtnevAtXPL0XOfxtR9tDveeMPuuX32G5ffTitATFaAmKwAMVkBYrICxGQFiMkKEJMVICYrQOzreZ6RN75zHbj23e7B3TG1OZ5aBt/5zFa2wIeQFSAmK0BMVoCYrAAxWQFisgLEZAWIyQoQu/Qu26nd4Xfb0d55t+s5b9zCvvF35bQCxGQFiMkKEJMVICYrQExWgJisADFZAWKyAsTGVrY7dlaJUzvac1vJO1eY5zapn/fKn/ftO60AMVkBYrICxGQFiMkKEJMVICYrQExWgJisALGxle3OovHc2vXOzeKd7ryPduf73Xnfc+68FXjNaQWIyQoQkxUgJitATFaAmKwAMVkBYrICxGQFiF16l+25ReO5e0PfaOr+3XPuvFF4xxt/dU4rQExWgJisADFZAWKyAsRkBYjJChCTFSAmK0Ds0pXtnWvIc7vSqSXlnZ/z2rm7XT9vVTzFaQWIyQoQkxUgJitATFaAmKwAMVkBYrICxGQFiF26sj23pNx55TeuMHeeeer/PfftnzP1zHf+Jp1WgJisADFZAWKyAsRkBYjJChCTFSAmK0BMVoDY1/M808/wr03tLKc2i3cuKae2zlN71jtvUL7zt+G0AsRkBYjJChCTFSAmK0BMVoCYrAAxWQFisgLExu6yvXMdOLX+nFpwrq2f6s67e9fO3WS8875rd97du+a0AsRkBYjJChCTFSAmK0BMVoCYrAAxWQFisgLELr3Lduruz51X3nHnfnftu90ovOON3+8OpxUgJitATFaAmKwAMVkBYrICxGQFiMkKEJMVIDa2sp262/XcBnfKnTvLtTd+zjve+B3tcFoBYrICxGQFiMkKEJMVICYrQExWgJisADFZAWKX3mX7eaZuM3Ur8P3ve25zPLXudVoBYrICxGQFiMkKEJMVICYrQExWgJisADFZAWI/Tb3x591mul40nttZ3nkr8LlXPvfL+W7/7zlOK0BMVoCYrAAxWQFisgLEZAWIyQoQkxUgJitAbGxluzZ1B+fa1N5x6gbWnb994yb1zl/d2p3P7LQCxGQFiMkKEJMVICYrQExWgJisADFZAWKyAsQuXdmunVu73rlnPffKO4vVnc9qahv6xp30nTvaNacVICYrQExWgJisADFZAWKyAsRkBYjJChCTFSD2ypXtG5272/Xc+55z7j964373javxNacVICYrQExWgJisADFZAWKyAsRkBYjJChCTFSBmZfs/mVrKft5Cd+3c/bvndrRTT3WO0woQkxUgJitATFaAmKwAMVkBYrICxGQFiMkKEHvlyvaN68/1M09tJXee6o23xp575XOfxp3fwprTChCTFSAmK0BMVoCYrAAxWQFisgLEZAWIyQoQu3Rle+cNnTvu3Ibeue5dm/p/z+2kz30aUxtcpxUgJitATFaAmKwAMVkBYrICxGQFiMkKEJMVIPb1PM/0MwAfxWkFiMkKEJMVICYrQExWgJisADFZAWKyAsRkBYjJChCTFSAmK0BMVoCYrAAxWQFisgLEZAWIyQoQkxUgJitATFaAmKwAMVkBYrICxGQFiMkKEJMVICYrQExWgJisADFZAWKyAsRkBYjJChCTFSAmK0BMVoCYrAAxWQFifwKWNjHtnWMNIAAAAABJRU5ErkJggg==" alt="교육 후 설문 QR" width="140" height="140">
+      <span style="flex:1;">
+        <h3>3분이면 충분합니다</h3>
+        <p>여러분의 한 줄이 다음 워크샵의 품질이 됩니다. 카메라로 QR을 비추거나 이 카드를 눌러 접속하세요.</p>
+      </span>
+      <span class="btn primary">설문 열기 →</span>
+    </a>
+  </section>
+
+  <footer class="foot">
+    <div class="who">GS 개발자 리그 &times; AWS Claude Code Bootcamp</div>
+    <div>2026.10.13 (화) 09:30 - 17:10 / GS타워</div>
+    <div>본 워크샵은 AWS Workshop Studio 기반으로 진행됩니다.</div>
+    <div><a href="https://comeddy.github.io/ccw-hands-on-lab/" target="_blank" rel="noopener">Hands-on Lab 포털</a> / <a href="https://catalog.us-east-1.prod.workshops.aws/workshops/b2f3455f-9d2e-4f63-9c3c-fc3fee87729c/ko-KR" target="_blank" rel="noopener">Workshop Studio</a> / <a href="https://github.com/whchoi98/claude-code-workshop/tree/main/20260901" target="_blank" rel="noopener">강의자료 PDF</a></div>
+  </footer>
+</div>
 
 </main>
-
-<footer>본 워크샵은 AWS Workshop Studio 기반으로 진행됩니다.</footer>
 
 </body>
 </html>

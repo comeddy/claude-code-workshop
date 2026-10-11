@@ -14,6 +14,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+### Changed
+
+- Restyle the GS bootcamp eDM (`ccw-hands-on-lab/gs-edm.html`) below the schedule in the Deep Dive eDM format: a dark mail container with linked participant-info rows, a self-paced lab and reference list (Ch6, Reference 1-3, slide PDFs, tech docs), a Hands-on Lab portal banner, and a post-workshop survey card with QR code.
+
 ## [1.2.0] - 2026-07-26
 
 ### Added
@@ -98,6 +102,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 이 문서는 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)를 기반으로 하며, [Semantic Versioning](https://semver.org/spec/v2.0.0.html)을 따릅니다.
 
 ## [Unreleased]
+
+### Changed
+
+- GS 부트캠프 eDM(`ccw-hands-on-lab/gs-edm.html`)의 일정표 아래를 Deep Dive eDM 포맷으로 개편: 다크 메일 컨테이너 안에 링크가 걸린 참가 안내 행, 자율 실습과 참고 자료 목록(Ch6, Reference 1-3, 강의자료 PDF, Tech Doc), Hands-on Lab 포털 배너, QR 코드가 포함된 교육 후 설문 카드 배치.
 
 ## [1.2.0] - 2026-07-26
 
