@@ -26,6 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Extend the GS bootcamp eDM Ch2 Subagents session from 40 to 60 minutes, shifting the following sessions by 20 minutes and shortening Capstone Missions from 180 to 160 minutes so the day still ends at 17:10.
 - Move the GS bootcamp eDM lunch to 11:30-13:00 (90 minutes) right after Ch2, run Ch4 and Ch5 back to back in the afternoon, and shorten Capstone Missions to 140 minutes to keep the 17:10 end.
 - Rebuild the GS bootcamp eDM schedule with separate theory and lab slots for Ch1, Ch2, Ch4, and Ch5, a 30-minute Lab Setting slot, lunch at 12:10-13:10, Capstone Missions at 15:40-17:30 (110 minutes), and Wrap-up until 17:40, updating the day's end time to 17:40.
+- Shorten the GS bootcamp eDM morning break after Lab Setting from 20 to 10 minutes and move every later session 10 minutes earlier, so lunch runs 12:00-13:00 and the day ends at 17:30.
 
 ## [1.2.0] - 2026-07-26
 
@@ -124,6 +125,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - GS 부트캠프 eDM의 Ch2 Subagents 세션을 40분에서 60분으로 늘리고, 이후 세션을 20분씩 조정하며 Capstone Missions를 180분에서 160분으로 줄여 종료 시각 17:10 유지.
 - GS 부트캠프 eDM의 점심을 Ch2 직후 11:30-13:00(90분)으로 옮기고, Ch4와 Ch5를 오후에 연달아 배치하며 Capstone Missions를 140분으로 줄여 17:10 종료 유지.
 - GS 부트캠프 eDM 일정표를 Ch1, Ch2, Ch4, Ch5의 이론과 실습 슬롯 분리, 30분 Lab Setting, 점심 12:10-13:10, Capstone Missions 15:40-17:30(110분), Wrap-up 17:40까지로 재구성하고 종료 시각을 17:40으로 변경.
+- GS 부트캠프 eDM의 Lab Setting 뒤 오전 휴식을 20분에서 10분으로 줄이고 이후 세션을 10분씩 앞당겨 점심 12:00-13:00, 17:30 종료로 조정.
 
 ## [1.2.0] - 2026-07-26
 
