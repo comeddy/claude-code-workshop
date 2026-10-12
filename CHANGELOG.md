@@ -25,6 +25,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Update the GS bootcamp eDM venue to GS타워 (역삼) 25층 오픈홀, rename the Ch5/Ch6 session to Ch5 CLI Reference (dropping the Agent SDK part from its description), and remove the Ch6 Agent SDK card from the self-paced list.
 - Extend the GS bootcamp eDM Ch2 Subagents session from 40 to 60 minutes, shifting the following sessions by 20 minutes and shortening Capstone Missions from 180 to 160 minutes so the day still ends at 17:10.
 - Move the GS bootcamp eDM lunch to 11:30-13:00 (90 minutes) right after Ch2, run Ch4 and Ch5 back to back in the afternoon, and shorten Capstone Missions to 140 minutes to keep the 17:10 end.
+- Rebuild the GS bootcamp eDM schedule with separate theory and lab slots for Ch1, Ch2, Ch4, and Ch5, a 30-minute Lab Setting slot, lunch at 12:10-13:10, Capstone Missions at 15:40-17:30 (110 minutes), and Wrap-up until 17:40, updating the day's end time to 17:40.
 
 ## [1.2.0] - 2026-07-26
 
@@ -122,6 +123,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - GS 부트캠프 eDM의 장소를 GS타워 (역삼) 25층 오픈홀로 변경하고, Ch5/Ch6 세션을 Ch5 CLI Reference로 바꿔 설명에서 Agent SDK 부분을 제거했으며, 자율 실습 목록의 Ch6 Agent SDK 카드 제거.
 - GS 부트캠프 eDM의 Ch2 Subagents 세션을 40분에서 60분으로 늘리고, 이후 세션을 20분씩 조정하며 Capstone Missions를 180분에서 160분으로 줄여 종료 시각 17:10 유지.
 - GS 부트캠프 eDM의 점심을 Ch2 직후 11:30-13:00(90분)으로 옮기고, Ch4와 Ch5를 오후에 연달아 배치하며 Capstone Missions를 140분으로 줄여 17:10 종료 유지.
+- GS 부트캠프 eDM 일정표를 Ch1, Ch2, Ch4, Ch5의 이론과 실습 슬롯 분리, 30분 Lab Setting, 점심 12:10-13:10, Capstone Missions 15:40-17:30(110분), Wrap-up 17:40까지로 재구성하고 종료 시각을 17:40으로 변경.
 
 ## [1.2.0] - 2026-07-26
 
