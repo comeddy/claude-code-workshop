@@ -23,6 +23,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Point the GS bootcamp eDM hero button and schedule chapter/capstone tags to the `claude-code-labs` site, so the page no longer links to `ccw-hands-on-lab`.
 - Note on the GS bootcamp eDM slide-PDF card that Ch3 (Admin Setup) is excluded from this workshop.
 - Update the GS bootcamp eDM venue to GS타워 (역삼) 25층 오픈홀, rename the Ch5/Ch6 session to Ch5 CLI Reference (dropping the Agent SDK part from its description), and remove the Ch6 Agent SDK card from the self-paced list.
+- Extend the GS bootcamp eDM Ch2 Subagents session from 40 to 60 minutes, shifting the following sessions by 20 minutes and shortening Capstone Missions from 180 to 160 minutes so the day still ends at 17:10.
 
 ## [1.2.0] - 2026-07-26
 
@@ -118,6 +119,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - GS 부트캠프 eDM의 상단 버튼과 일정표의 챕터, 캡스톤 태그도 `claude-code-labs` 사이트로 연결해 `ccw-hands-on-lab` 링크를 모두 제거.
 - GS 부트캠프 eDM의 강의자료 PDF 카드에 Ch3(Admin Setup)는 본 워크샵에서 제외된다는 안내 추가.
 - GS 부트캠프 eDM의 장소를 GS타워 (역삼) 25층 오픈홀로 변경하고, Ch5/Ch6 세션을 Ch5 CLI Reference로 바꿔 설명에서 Agent SDK 부분을 제거했으며, 자율 실습 목록의 Ch6 Agent SDK 카드 제거.
+- GS 부트캠프 eDM의 Ch2 Subagents 세션을 40분에서 60분으로 늘리고, 이후 세션을 20분씩 조정하며 Capstone Missions를 180분에서 160분으로 줄여 종료 시각 17:10 유지.
 
 ## [1.2.0] - 2026-07-26
 
